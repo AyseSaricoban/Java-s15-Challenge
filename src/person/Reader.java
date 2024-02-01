@@ -11,9 +11,10 @@ public class Reader extends Person {
     private int maxBookLimit;
     private String address;
     private long phoneNo;
+    private String date;
 
 
-    public Reader(String name, String memberId, memberType type, String dateOfMembership, boolean noBooksIssued, int maxBookLimit, String address, long phoneNo) {
+    public Reader(String name, String memberId, memberType type, String date, String dateOfMembership, boolean noBooksIssued, int maxBookLimit, String address, long phoneNo) {
         super(name);
         this.memberId = memberId;
         this.type = type;
@@ -22,6 +23,7 @@ public class Reader extends Person {
         this.maxBookLimit = maxBookLimit;
         this.address = address;
         this.phoneNo = phoneNo;
+        this.date = date;
     }
 
     public Reader(String name, String memberId, memberType type, String dateOfMembership, String address, long phoneNo) {
@@ -31,6 +33,7 @@ public class Reader extends Person {
         this.dateOfMembership = dateOfMembership;
         this.address = address;
         this.phoneNo = phoneNo;
+
     }
 
     public Reader(String memberId) {
@@ -39,6 +42,7 @@ public class Reader extends Person {
 
     public Reader(String memberId, memberType type, String dateOfMemberShip, String address, long phoneNo) {
         super(type.name());
+
     }
 
 

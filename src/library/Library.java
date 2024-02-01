@@ -1,6 +1,7 @@
 package library;
 
 import book.Book;
+import enums.Category;
 import enums.memberType;
 import person.Reader;
 
@@ -12,16 +13,18 @@ public interface Library {
 
     void removeBook(String bookName, Book book);
 
-    void addMember(String memberId, memberType type, String dateOfMemberShip, String address, long phoneNo);
+    void addMember(String memberId, String name, memberType type, String dateOfMemberShip, String address, long phoneNo);
 
 
     void removeMember(String memberId);
     void verifyMember(String memberId);
-    void searchBookByType(String bookType);
+    void searchBookByType(String Category);
     void searchBookByName(String bookName);
-    void issueBook();
-    void returnBook();
-    void bill();
+    boolean isAvailable(int bookId);
+    void issueBook(String bookId, String memberId);
+
+    void returnBook(String bookId, String memberId);
+    double bill(String memberId, String bookId);
 
 
 
