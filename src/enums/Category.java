@@ -1,6 +1,6 @@
 package enums;
 
-public enum category {
+public enum Category {
     CHILDREN,
     JOURNAL,
     MAGAZINE;
